@@ -4,7 +4,7 @@ v1 = [4 2 5];
 v2 = [3 8 9];
 
 dotProduct = dot(v1, v2);
-    cosTheta = dotProduct / (norm(v1) * norm(v2));
+cosTheta = dotProduct / (norm(v1) * norm(v2));
 angleDeg = acosd(cosTheta);
 angleRad = acos(cosTheta);
 

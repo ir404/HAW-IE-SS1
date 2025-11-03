@@ -1,4 +1,6 @@
 %% SS1 Lab 1, Problem 4 - evaluating Taylor series
+% 29 Oct 2025
+% 
 
 x = -pi / 2;
 sum = 0; 
@@ -16,3 +18,4 @@ end
 fprintf("Evaluated sum = %f\n", sum);
 fprintf("Last summand = %e\n", summand);
 fprintf("Last index = %d\n", index);
+fprintf("sin(-pi/2) = %f\n", sin(-pi/2));

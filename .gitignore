@@ -1,0 +1,68 @@
+# ---------------------------------------------------------
+# MATLAB / Simulink temporary, backup, and auto-generated files
+# ---------------------------------------------------------
+
+# Autosave and backup files
+*.asv
+*.m~ 
+*.bak
+*.autosave
+
+# MATLAB cache and preferences
+*.slxc
+*.slx.autosave
+*.mex*
+*.mdlp
+*.mdl.r*
+
+# Code generation / build folders
+codegen/
+slprj/
+scc_prj/
+cachedir/
+
+# Simulink cache
+*.slxc
+*_rtw/
+
+# Profiles
+*.prf
+
+# Logs and reports
+*.log
+*.xml
+*.jrn
+
+# Workspace and diary files
+*.mat
+*.fig
+*.mlx.backup
+
+# ---------------------------------------------------------
+# OS / editor files
+# ---------------------------------------------------------
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Linux file explorers
+*~
+
+# VS Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# ---------------------------------------------------------
+# Optional: ignore large data exports (uncomment if needed)
+# ---------------------------------------------------------
+# *.csv
+# *.xlsx
+# *.h5
+# results/
+# output/

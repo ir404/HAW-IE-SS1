@@ -1,2 +1,2 @@
 # SS1
-Stuff from my Signals & Siystems 1 course at uni 
+Stuff from my Signals & Systems 1 course at uni 

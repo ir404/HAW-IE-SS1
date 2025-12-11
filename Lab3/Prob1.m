@@ -53,6 +53,7 @@ function mainTask1()
     [precalculatedMagSpec, precalculatedPhaseSpec] = getMagPhaseSpectra_precalculated(omega);
     FT_magSpec = D0_magSpec + D1_magSpec;
     FT_phaseSpec = D0_phaseSpec + D1_phaseSpec;
+    
     figure;
     subplot(2, 2, 1);
     plot(omega, FT_magSpec); 
@@ -61,6 +62,7 @@ function mainTask1()
     ylabel('Magnitude');
     ylim([0, 2]);
     grid on;
+    
     subplot(2, 2, 2);
     plot(omega, FT_phaseSpec, 'r'); 
     title(['Phase Spectrum of f(t) = δ(t - T1) + δ(t)', ' where T1=', num2str(T1), 's']);
@@ -122,9 +124,9 @@ function ftVec = computeFT_diracPulse(omega, t0)
 end
 
 function [magSpec, phaseSpec] = getMagPhaseSpectra_fromFTVec(ftVec) 
+    magSpec = abs(ftVec);
     realPart = real(ftVec);
-    imaginaryPart = imag(ftVec);
-    magSpec = sqrt(realPart.^2 + imaginaryPart.^2);
+    imaginaryPart = imag(ftVec); 
     phaseSpec = atan2(imaginaryPart, realPart);
 end
 
@@ -132,6 +134,6 @@ end
 % equations derived in the preparation
 function [magSpec, phaseSpec] = getMagPhaseSpectra_precalculated(omega)
     t0 = 1e-3;                       % time delay of 1 ms
-    magSpec = sqrt(2 + 2*cos(omega .* t0));
+    magSpec = sqrt(2 + 2*cos(omega * t0));
     phaseSpec = (-omega * t0) / 2;
 end

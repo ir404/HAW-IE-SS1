@@ -4,7 +4,7 @@
 % Laplace Transforms                                                                    %
 % Authors: Imran Rizwan 2778020, Lawrence Byabato 2778215, Gibriel Zibo 2778062         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+clear;
 clc; 
 
 % define the symbolic variables we need
@@ -12,5 +12,5 @@ syms s t;
 
 Y = laplace( (cos(2*t) + 2*sin(2*t)) * heaviside(t) );
 
-display(Y);
+fprintf("Y(s) = \n");
 pretty(Y);

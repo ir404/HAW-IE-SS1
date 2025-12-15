@@ -4,7 +4,7 @@
 % Laplace Transforms                                                                    %
 % Authors: Imran Rizwan 2778020, Lawrence Byabato 2778215, Gibriel Zibo 2778062         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+clear;
 clc;
 
 % define the symbolic variables we need
@@ -15,7 +15,7 @@ ode = diff(y, 2) + 3*diff(y) + 2*y - exp(-t) * heaviside(t);
 
 
 % transform the ode into the Laplace domain
-lode = laplace(ode, t, s);
+ltode = laplace(ode, t, s);
 
 % sub unknown function with Y for better readability and apply the initial 
 % conditions: y(0) = 0 and y'(0) = 0
@@ -28,19 +28,18 @@ Y = solve(eqn, Y);
 y = ilaplace(Y, s, t);
 
 
-
 fprintf("ODE: \n");
 pretty(ode);
 
-fprintf("Laplace ODE: \n");
-pretty(lode);
+fprintf("Laplace transformed ODE: \n");
+pretty(ltode);
 
 fprintf("Eqn: \n");
 pretty(eqn);
 
-fprintf("Y in Laplace domain: \n");
+fprintf("(ii) In Laplace domain, Y(s) = \n");
 pretty(Y);
 
 
-fprintf("y in time domain: \n");
+fprintf("(iii) In time domain, y(t) = \n");
 pretty(y);

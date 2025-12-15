@@ -4,7 +4,7 @@
 % Laplace Transforms                                                                    %
 % Authors: Imran Rizwan 2778020, Lawrence Byabato 2778215, Gibriel Zibo 2778062         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+clear;
 clc;
 
 % define the symbolic variables we need
@@ -14,5 +14,5 @@ F = 1 + (s / (s^2 + 9));
 
 s = ilaplace(F, s, t);
 
-disp(s);
+fprintf("f(t) = \n")
 pretty(s);
